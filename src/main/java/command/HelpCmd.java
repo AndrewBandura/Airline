@@ -16,7 +16,6 @@ public class HelpCmd implements Command {
     public boolean execute(String... args) {
         System.out.println("List of commands:");
 
-//        commands.forEach((k,v)->System.out.println(k + " : "+ "\t" + v.getDescription()));
         commands.forEach((k,v)->{
             System.out.printf("%-15s",k);
             System.out.print(": "+v.getDescription());
