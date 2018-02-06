@@ -34,6 +34,6 @@ public class FindByRangeOfFuelConsumptionCmd implements Command {
 
     @Override
     public String getDescription() {
-        return "Finds by range of fuel consumption";
+        return "Finds aircraft by range of fuel consumption. Example: \"find 100 1000 \"";
     }
 }

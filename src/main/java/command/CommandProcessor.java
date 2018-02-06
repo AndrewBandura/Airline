@@ -6,9 +6,9 @@ package command;
 
 import service.AirlineCompanyService;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.TreeMap;
 
 public class CommandProcessor {
     private static final String MSG_UNSUPPORTED_COMMAND = "Unsupported command";
@@ -20,14 +20,21 @@ public class CommandProcessor {
 
         this.consoleEncoding = consoleEncoding;
 
-        commands = new HashMap<>();
+        commands = new TreeMap<>();
+
         Command cmd = new DisplayAircraftListCmd(airlineCompanyService);
         commands.put(cmd.getName(), cmd);
+
         cmd = new CalculateCarryingCapacityCmd(airlineCompanyService);
         commands.put(cmd.getName(), cmd);
+
         cmd = new CalculateTotalCapacityCmd(airlineCompanyService);
         commands.put(cmd.getName(), cmd);
+
         cmd = new FindByRangeOfFuelConsumptionCmd(airlineCompanyService);
+        commands.put(cmd.getName(), cmd);
+
+        cmd = new HelpCmd(commands);
         commands.put(cmd.getName(), cmd);
 
         cmd = new ExitCmd();
@@ -39,6 +46,7 @@ public class CommandProcessor {
 
         boolean result = true;
         Scanner scanner = new Scanner(System.in, consoleEncoding);
+        System.out.println("Welcome to airline terminal! Print \"help\" to learn more.");
         do {
             System.out.print(">");
             String fullCommand = scanner.nextLine();

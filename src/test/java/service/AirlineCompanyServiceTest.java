@@ -1,5 +1,9 @@
-package domain;
+package service;
 
+import domain.Aircraft;
+import domain.AirlineCompany;
+import domain.JetPlane;
+import domain.TurboPropPlane;
 import org.junit.Before;
 import org.junit.Test;
 import service.AirlineCompanyService;
@@ -49,5 +53,14 @@ public class AirlineCompanyServiceTest {
         List<Aircraft> sortedList = airlineService.getSortedAircraftList();
         assertEquals(expectedMin, sortedList.get(0).getFlightRange());
         assertEquals(expectedMax, sortedList.get(2).getFlightRange());
+    }
+
+    @Test
+    public void findByFuelConsumptionRangeShouldReturnOneItem(){
+        final double from = 100;
+        final double to = 500;
+        int expectedSize = 1;
+        List<Aircraft> foundList = airlineService.findByFuelConsumptionRange(from, to);
+        assertEquals(expectedSize, foundList.size());
     }
 }

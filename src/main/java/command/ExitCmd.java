@@ -18,6 +18,6 @@ public class ExitCmd implements Command {
 
     @Override
     public String getDescription() {
-        return "Exits from command factory";
+        return "Exits from command processor";
     }
 }
