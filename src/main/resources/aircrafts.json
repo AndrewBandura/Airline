@@ -1,0 +1,29 @@
+{
+  "staff":[
+    {
+      "type":"TurboPropPlane",
+      "name":"AN-22",
+      "flightRange":"1000",
+      "totalCapacity":"55",
+      "carryingCapacity":"50",
+      "fuelConsumption":"300.7"
+    },
+    {
+      "type":"JetPlane",
+      "name":"Boeing-737",
+      "flightRange":"4000",
+      "totalCapacity":"155",
+      "carryingCapacity":"150",
+      "fuelConsumption":"1000"
+    },
+    {
+      "type":"JetPlane",
+      "name":"Airbus-320",
+      "flightRange":"2000",
+      "totalCapacity":"130",
+      "carryingCapacity":"125",
+      "fuelConsumption":"700.2"
+    }
+  ]
+
+}
