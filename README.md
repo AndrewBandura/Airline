@@ -1,6 +1,6 @@
 ## Synopsis
 
-Console application with command interface for managing airline company. Simple version with no data storage and limited number of commands.  
+Console application with command interface for managing airline company. Simple version with data storage in JSON file and limited number of commands.  
 
 #### Available commands:
 <li> 
