@@ -1,6 +1,7 @@
 ## Synopsis
 
-Console application with command interface for managing airline company. Simple version with no data storage and limited number of commands.
+Console application with command interface for managing airline company. Simple version with no data storage and limited number of commands.  
+
 #### Available commands:
 <li> 
 C_CAPACITY     : Calculates carrying capacity of aircraft
@@ -23,4 +24,4 @@ T_CAPACITY     : Calculates total capacity of aircraft
 
 ## Stack of technologies
 
-Java 8, maven, Junit, lombock
+Java 8, maven, Junit, lombock, GSon
